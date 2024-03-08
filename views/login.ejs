@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="popup">
+            <h2>Invalid Credentials</h2>
+            <p>Please check your email and password and try again.</p>
+        </div>
+        <h1>Welcome!</h1>
+        <div class="form-group">
+            <label for="username">Email</label>
+            <input type="text" id="email" name="username" required autocomplete="off">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+            <button type="submit" id="submit-btn">Login</button>
+            <a href="https://localhost:3000/signup" id="signup-btn">Sign Up</a>
+        </div>
+    </div>
+    <script src="/js/login.js"></script>
+</body>
+
+</html>

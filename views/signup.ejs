@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Please signup</title>
+    <link rel="stylesheet" type="text/css" href="/css/signup.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <form class="form" method="POST" action="/create-user">
+            <span class="heading">Registration Form</span>
+            <div class="form-group">
+                <input class="form-input" name="name" required="" type="text" autocomplete="off" />
+                <label>Name</label>
+            </div>
+            <div class="form-group">
+                <input class="form-input" required="" name="email" type="email" autocomplete="off" />
+                <label>Email</label>
+            </div>
+            <div class="form-group">
+                <input class="form-input" required="" name="password" type="password" />
+                <label>Password</label>
+            </div>
+            <div class="form-group">
+                <input class="form-input" required="" type="number" name="mobileNumber" autocomplete="off" />
+                <label>Mobile</label>
+            </div>
+            <div class="form-group">
+                <input class="form-input" required="" name="city" type="text" autocomplete="off" />
+                <label>City</label>
+            </div>
+            <button>SUBMIT</button>
+        </form>
+    </div>
+</body>
+
+</html>

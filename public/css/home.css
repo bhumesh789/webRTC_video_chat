@@ -1,0 +1,80 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   font-family: Arial, sans-serif;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 30vh;
+   background-color: #f8f9fa;
+}
+
+.meeting-box {
+   text-align: center;
+   margin-bottom: 10%;
+}
+
+a{
+   text-decoration: none;
+   color: black;
+}
+
+h1 {
+   margin: 3%;
+}
+
+button {
+   cursor: pointer;
+}
+
+.logo {
+   font-family: 'Arial', sans-serif;
+   font-size: 3em;
+   font-weight: bold;
+   color: #007bff;
+   margin-top: 40%;
+}
+
+
+.meeting-info{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.card {
+   max-width: 400px;
+   width: 100%;
+   background-color: #fff;
+   border-radius: 8px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   overflow: hidden;
+}
+
+.card-header {
+   background-color: #3498db;
+   color: #fff;
+   padding: 20px;
+   text-align: center;
+}
+
+.card-body {
+   padding: 20px;
+}
+
+.meeting-link {
+   display: block;
+   margin-bottom: 15px;
+   color: #3498db;
+   text-decoration: none;
+   word-break: break-all;
+}
+
+@media only screen and (max-width: 600px) {
+   .card {
+      border-radius: 0;
+   }
+}

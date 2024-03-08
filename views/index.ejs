@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Video chat</title>
+  <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="/css/meet.css">
+  <link rel="icon" href="data:," />
+</head>
+
+<body style="background-color: #13324f" class="text-light">
+  <div class="container" id="video-div">
+    <div class="row">
+      <div class="col d-flex justify-content-center position-relative" id="video-div">
+        <video id="video-container" playsinline="" class="border border-white rounded mt-3"></video>
+        <video id="video-container2" playsinline="" class="position-absolute fixed-left border border-white rounded"></video>
+      </div>
+    </div>
+
+    <div class="row pt-3" id="btn" style="margin-top: 1%;">
+      <div class="col d-flex justify-content-center gap-2 align-items-center" id="btn-div">
+        <button class="small-circle-btn" id="microphone-btn" type="button" style="background-color: #34495e">
+          <i id="Mic" class="bi bi-mic-fill text-white"></i>
+        </button>
+
+        <button class="small-circle-btn" id="camera-btn" type="button" style="background-color: #34495e">
+          <i id="Video" class="bi bi-camera-video text-white"></i>
+        </button>
+
+        <button class="small-circle-btn btn" id="message-btn" type="button" style="background-color: #34495e;"
+          data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+          <i id="Mesg" class="bi bi-chat-left-text text-white"></i>
+        </button>
+
+        <button class="small-circle-btn btn" id="screen-btn" type="button" style="background-color: #34495e;">
+          <i id="Screen" class="bi bi-display text-white"></i>
+        </button>
+
+        <button class="small-circle-btn" id="record-btn" type="button" style="background-color: #34495e;">
+          <i id="Record" class="bi bi-record-btn text-white"></i>
+        </button>
+
+        <button class="btn btn-dark small-circle-btn d-flex justify-content-center align-items-center bg-danger"
+          id="call-btn" type="button">
+          <img src="/logo/hang-up.svg" alt="svg" style="width: 30px; height:30px;" draggable="false">
+        </button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="offcanvas offcanvas-end rounded" data-bs-backdrop="false" id="staticBackdrop"
+          aria-labelledby="staticBackdropLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="staticBackdropLabel">In-call messages</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col offset">
+                <div class="card">
+                  <div class="card-header">Chat</div>
+                  <div class="card-body chat-container" id="chat-container"></div>
+                  <div class="card-footer">
+                    <input type="text" id="message-input" class="form-control" placeholder="Type your message...">
+                    <button class="btn btn-primary mt-2" id="send-button">Send</button>
+                    <input type="file" id="file-input" style="display: none;">
+                    <button onclick="document.getElementById('file-input').click()"
+                      class="btn btn-secondary mt-2">Upload</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+  <script src="/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/script.js"></script>
+</body>
+
+</html>
